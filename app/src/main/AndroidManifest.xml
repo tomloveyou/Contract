@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="personcom.yl.contract">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 基础模块（必须加入以下声明）START -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"  android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ContractDetalActivity"
+            android:label="@string/title_activity_contract_detal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.AddContractActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".activity.CircleImageSectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.RoundImageSectionActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 实时通信模块、推送（均需要加入以下声明） START -->
+        <!-- 实时通信模块、推送都要使用 PushService -->
+        <service android:name="com.avos.avoscloud.PushService"/>
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 实时通信模块、推送 END -->
+
+        <!-- 反馈组件（需要加入以下声明）START -->
+        <activity
+            android:name="com.avos.avoscloud.feedback.ThreadActivity" >
+        </activity>
+        <activity android:name=".widget.multi_image_selector.MultiImageSelectorActivity"  android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+
+</manifest>

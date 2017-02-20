@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_contract"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    android:orientation="vertical"
+    tools:context="personcom.yl.contract.activity.AddContractActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:background="@drawable/button_cicle_blue_cornor_shape"
+            android:id="@+id/activity_add_contract_cancel"
+            android:layout_width="40dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:padding="4dp"
+            android:text="取消"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp"
+            android:text="新建联系人"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/activity_add_contract_comfirm"
+            android:layout_width="40dp"
+            android:gravity="center"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_cicle_white_cornor_shape"
+            android:padding="4dp"
+            android:text="确定"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background_color"
+        android:orientation="vertical">
+
+        <personcom.yl.contract.widget.EaseImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/activity_add_contract_avator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/img_default_head"
+            app:ease_shape_type="round" />
+
+
+        <personcom.yl.contract.widget.ClearEditText
+            android:layout_marginBottom="0.5dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="0.5dp"
+            android:id="@+id/activity_add_contract_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@mipmap/ic_delete_icon"
+            android:hint="姓名"
+            android:padding="8dp" />
+
+        <personcom.yl.contract.widget.ClearEditText
+            android:layout_marginBottom="0.5dp"
+            android:background="@android:color/white"
+            android:id="@+id/activity_add_contract_conpaney"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@mipmap/ic_delete_icon"
+            android:hint="公司"
+            android:padding="8dp" />
+
+        <personcom.yl.contract.widget.ClearEditText
+            android:layout_marginBottom="0.5dp"
+            android:background="@android:color/white"
+            android:id="@+id/activity_add_contract_job"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@mipmap/ic_delete_icon"
+            android:hint="职位"
+            android:padding="8dp" />
+
+        <personcom.yl.contract.widget.ClearEditText
+            android:background="@android:color/white"
+            android:id="@+id/activity_add_contract_bumen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@mipmap/ic_delete_icon"
+            android:hint="部门"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_arror_down_icon"
+            android:gravity="center_vertical"
+            android:text="联系方式" />
+
+        <personcom.yl.contract.widget.ClearEditText
+            android:background="@android:color/white"
+            android:id="@+id/activity_add_contract_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_delete_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_arror_down_icon"
+            android:gravity="center_vertical"
+            android:text="地址" />
+
+        <personcom.yl.contract.widget.ClearEditText
+            android:background="@android:color/white"
+            android:id="@+id/activity_add_contract_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_delete_icon" />
+    </LinearLayout>
+</LinearLayout>
